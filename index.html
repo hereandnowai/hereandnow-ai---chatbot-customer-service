@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HEREANDNOW AI Customer Support</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Explicitly configure Tailwind CSS dark mode strategy
+    // This should ideally be in a tailwind.config.js if using a build process,
+    // but for CDN usage, this ensures the 'class' strategy is active.
+    if (window.tailwind) {
+      window.tailwind.config = {
+        darkMode: 'class', // or 'media'
+        theme: {
+          extend: {
+            // You can extend your theme here if needed
+          }
+        }
+      }; // Explicit semicolon for the assignment statement
+    } else {
+      console.warn("Tailwind CSS global object not found. Skipping custom config.");
+    }
+  </script>
+  <link rel="icon" href="https://raw.githubusercontent.com/hereandnowai/images/refs/heads/main/logos/HNAI%20Fevicon%20-Teal%20%26%20Golden%20Logo%20-%20DESIGN%203%20-%20Raj-03.png" type="image/png">
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.5.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="./index.tsx"></script> {/* Changed to relative path */}
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
